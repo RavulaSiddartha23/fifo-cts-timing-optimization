@@ -1,0 +1,121 @@
+OpenROAD bazel-nostamp
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /home/siddu/openroad-utilization-study/pdk/nangate45/lef/Nangate45.lef, created 22 layers, 27 vias, 2 library cells
+[WARNING ODB-0217] duplicate VIARULE (Via1Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via1Array-1) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via1Array-2) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via1Array-3) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via1Array-4) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via2Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via2Array-1) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via2Array-2) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via2Array-3) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via2Array-4) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via3Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via3Array-1) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via3Array-2) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via4Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via5Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via6Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via7Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via8Array-0) ignoring...
+[WARNING ODB-0217] duplicate VIARULE (Via9Array-0) ignoring...
+[INFO ODB-0394] Duplicate site FreePDK45_38x28_10R_NP_162NW_34O in Nangate45-opt already seen in Nangate45
+[INFO ODB-0227] LEF file: /home/siddu/openroad-utilization-study/pdk/nangate45/lef/Nangate45-opt.lef, created 135 library cells
+1
+===== FINAL DESIGN AREA =====
+Design area 4561 um^2 42% utilization.
+===== CLOCK SKEW =====
+Clock fifo_clk
+   0.12 source latency _3495_/CK ^
+  -0.12 target latency _3543_/CK ^
+   0.10 clock uncertainty
+   0.00 CRPR
+--------------
+   0.11 setup skew
+
+===== SETUP TIMING =====
+Startpoint: _3497_ (rising edge-triggered flip-flop clocked by fifo_clk)
+Endpoint: _3557_ (rising edge-triggered flip-flop clocked by fifo_clk)
+Path Group: fifo_clk
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock fifo_clk (rise edge)
+   0.000000    0.000000   clock source latency
+   0.000000    0.000000 ^ clk (in)
+   0.044687    0.044687 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.037161    0.081848 ^ clkbuf_4_12_0_clk/Z (CLKBUF_X3)
+   0.037241    0.119088 ^ clkbuf_6_49__f_clk/Z (CLKBUF_X3)
+   0.000097    0.119185 ^ _3497_/CK (DFF_X1)
+   1.254338    1.373523 ^ _3497_/Q (DFF_X1)
+   2.383372    3.756895 v _1938_/ZN (INV_X1)
+   0.456122    4.213017 ^ _2751_/ZN (AOI21_X1)
+   0.042603    4.255620 v _2754_/ZN (AOI221_X1)
+   0.055969    4.311589 ^ _2760_/ZN (OAI21_X1)
+   0.017359    4.328948 v _2763_/ZN (AOI21_X1)
+   0.000005    4.328954 v _3557_/D (DFF_X1)
+               4.328954   data arrival time
+
+  10.000000   10.000000   clock fifo_clk (rise edge)
+   0.000000   10.000000   clock source latency
+   0.000000   10.000000 ^ clk (in)
+   0.044687   10.044687 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.037145   10.081832 ^ clkbuf_4_3_0_clk/Z (CLKBUF_X3)
+   0.035926   10.117758 ^ clkbuf_6_14__f_clk/Z (CLKBUF_X3)
+   0.000063   10.117821 ^ _3557_/CK (DFF_X1)
+  -0.100000   10.017820   clock uncertainty
+   0.000000   10.017820   clock reconvergence pessimism
+  -0.038255    9.979566   library setup time
+               9.979566   data required time
+-----------------------------------------------------------------
+               9.979566   data required time
+              -4.328954   data arrival time
+-----------------------------------------------------------------
+               5.650612   slack (MET)
+
+
+===== HOLD TIMING =====
+Startpoint: _3495_ (rising edge-triggered flip-flop clocked by fifo_clk)
+Endpoint: _3495_ (rising edge-triggered flip-flop clocked by fifo_clk)
+Path Group: fifo_clk
+Path Type: min
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock fifo_clk (rise edge)
+   0.000000    0.000000   clock source latency
+   0.000000    0.000000 ^ clk (in)
+   0.044687    0.044687 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.037239    0.081926 ^ clkbuf_4_1_0_clk/Z (CLKBUF_X3)
+   0.039534    0.121460 ^ clkbuf_6_6__f_clk/Z (CLKBUF_X3)
+   0.000132    0.121592 ^ _3495_/CK (DFF_X1)
+   0.068154    0.189746 ^ _3495_/QN (DFF_X1)
+   0.015701    0.205447 v _2166_/ZN (OAI21_X1)
+   0.027584    0.233032 ^ _2167_/ZN (AOI21_X1)
+   0.000006    0.233038 ^ _3495_/D (DFF_X1)
+               0.233038   data arrival time
+
+   0.000000    0.000000   clock fifo_clk (rise edge)
+   0.000000    0.000000   clock source latency
+   0.000000    0.000000 ^ clk (in)
+   0.044687    0.044687 ^ clkbuf_0_clk/Z (CLKBUF_X3)
+   0.037239    0.081926 ^ clkbuf_4_1_0_clk/Z (CLKBUF_X3)
+   0.039534    0.121460 ^ clkbuf_6_6__f_clk/Z (CLKBUF_X3)
+   0.000132    0.121592 ^ _3495_/CK (DFF_X1)
+   0.100000    0.221592   clock uncertainty
+   0.000000    0.221592   clock reconvergence pessimism
+   0.011388    0.232980   library hold time
+               0.232980   data required time
+-----------------------------------------------------------------
+               0.232980   data required time
+              -0.233038   data arrival time
+-----------------------------------------------------------------
+               0.000058   slack (MET)
+
+
+===== ROUTING STATUS =====
+1

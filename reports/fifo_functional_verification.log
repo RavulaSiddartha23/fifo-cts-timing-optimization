@@ -1,0 +1,12 @@
+VCD info: dumpfile simulation/sync_fifo.vcd opened for output.
+TEST 1: Filling FIFO
+PASS: FIFO became FULL
+PASS: Overflow write rejected
+TEST 2: Reading all 16 entries
+PASS: All 16 words read correctly
+PASS: FIFO became EMPTY
+PASS: Underflow read rejected
+TEST 3: Simultaneous read and write
+PASS: Simultaneous read/write
+ALL FIFO TESTS PASSED
+testbench/sync_fifo_tb.v:171: $finish called at 416000 (1ps)

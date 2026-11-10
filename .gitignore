@@ -1,0 +1,34 @@
+# Git
+.git/
+
+# Simulation temporary files
+*.vcd
+*.vvp
+
+# OpenROAD temporary and intermediate databases
+physical_design/fifo_floorplan.odb
+physical_design/fifo_pin_placement.odb
+physical_design/fifo_pin_placement_rows.odb
+physical_design/fifo_placed.odb
+physical_design/fifo_cts.odb
+physical_design/fifo_cts_hold_repaired.odb
+physical_design/fifo_global_route.odb
+physical_design/fifo_legalized.odb
+physical_design/fifo_detailed_route.odb
+
+# Keep the final database
+!physical_design/fifo_final.odb
+
+# Temporary logs
+*.tmp
+*.bak
+
+
+# Large schematic exports (not useful for the project presentation)
+reports/fifo_mapped_schematic.svg
+reports/fifo_schematic.dot
+reports/fifo_schematic.svg
+
+# Superseded or empty reports
+reports/fifo_final_timing_and_area.rpt
+reports/fifo_detailed_route.drc

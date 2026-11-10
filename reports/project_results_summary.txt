@@ -1,0 +1,85 @@
+PROJECT: Clock Tree Synthesis and Timing Optimization of a 32-bit Synchronous FIFO
+
+1. DESIGN CONFIGURATION
+- FIFO data width: 32 bits
+- FIFO depth: 16 entries
+- Storage capacity: 512 bits
+- Clock period: 10 ns (100 MHz)
+- Standard-cell library: Nangate45
+- Storage implementation: Register-based; no SRAM macro
+
+2. FUNCTIONAL VERIFICATION
+- FIFO fill and full detection: PASS
+- Overflow rejection: PASS
+- Reading all 16 entries in order: PASS
+- Empty detection: PASS
+- Underflow rejection: PASS
+- Simultaneous read/write: PASS
+- Overall testbench result: ALL FIFO TESTS PASSED
+
+3. GENERIC SYNTHESIS
+- Generic cells: 1123
+- Generic enabled storage flops: 512
+- Generic multiplexers: 480
+- Yosys design check: 0 problems
+
+4. TECHNOLOGY MAPPING
+- Total mapped cells: 1936
+- DFF_X1: 557
+- MUX2_X1: 549
+- Mapped cell area: 4423.048 um^2
+
+5. FLOORPLAN AND PLACEMENT
+- Initial target utilization: 40%
+- Effective placement utilization: approximately 40.7%
+- Standard-cell placement: legalized
+- Illegal placement cells after legalization: 0
+
+6. CLOCK TREE SYNTHESIS
+- Initial clock sinks: 557
+- Clock buffers created: 81
+- Clock nets created: 81
+- Maximum clock-tree level: 6
+- Reported setup skew: approximately 0.11 ns
+
+7. HOLD REPAIR
+- Hold buffers inserted: 3
+- Hold WNS after repair: 0.000 ns (reported)
+- Hold TNS after repair: 0.000 ns (reported)
+
+8. GLOBAL ROUTING
+- Total routing demand: 11162
+- Available routing resources: 108373
+- Total resource usage: approximately 10.30%
+- Total global-route wire length: 46859 um
+- Routed nets: 2061
+- Maximum reported congestion: 0
+
+9. DETAILED ROUTING
+- Detailed routing completed successfully
+- Final detailed-route violations: 0
+- Detailed-route wire length: 32714 um
+- Detailed-route vias: 16150
+- Detailed-route runtime: approximately 1008.57 seconds
+- Antenna net violations: 0
+- Antenna pin violations: 0
+
+10. FINAL PHYSICAL DESIGN
+- Final design area: 4561 um^2
+- Final utilization: 42%
+- Final database: physical_design/fifo_final.odb
+- Routed status: 1
+
+11. FINAL TIMING ESTIMATE
+- Setup slack: +5.650612 ns (MET)
+- Hold slack: +0.000058 ns (MET)
+- Setup clock skew: approximately 0.11 ns
+- Timing values use placement-based parasitic estimation.
+- These values are not detailed-route SPEF extraction or sign-off timing.
+
+12. PROJECT SCOPE AND LIMITATIONS
+- Standard-cell physical-design flow completed through detailed routing.
+- No SRAM macro was used.
+- No power analysis or power optimization result is claimed.
+- No foundry sign-off or fabrication-ready GDSII claim is made.
+- Detailed-route completion and timing estimation are reported separately.
